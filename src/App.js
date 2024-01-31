@@ -27,8 +27,6 @@ function App() {
       return index!== changingindex? {item}:{name:item.name,des:item.des,mentor:item.mentor, url:item.url, complete: !item.complete}
       }))
       }
-
-
   return (
   <Mycontext.Provider value={{search,setsearch,courseslist,enrolarray,enrolbtn,notenrolbtn,completecourse}}>
     <div className='App-container'>
