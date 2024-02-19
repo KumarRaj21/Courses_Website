@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import { Mycontext } from '../App'
 
 const Student = () => {
-  const {enrolarray,notenrolbtn,completecourse} =useContext(Mycontext)
+  const {enrolarray,notenrolbtn,completebtn} =useContext(Mycontext)
   return (
     <div className='student-container'>
       <div className='student-header'>
@@ -12,7 +12,7 @@ const Student = () => {
         return (
           <div className='card' key ={index}>
           <div className='card-details'>
-            <input type="checkbox" onClick={()=> completecourse(index)} />
+            <input type="checkbox" onClick={()=> completebtn(index)} />
             <h3 className='card-name'> Course : {item.name}</h3>
             <div className='card-mentor'> Mentor : {item.mentor}</div>
             <div className='card-des'>{item.des}</div>

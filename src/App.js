@@ -22,13 +22,13 @@ function App() {
      })
     })
   }
-  const completecourse=(changingindex)=>{
-    setenrolarray(enrolarray.map((item,index)=>{
-      return index!== changingindex? {item}:{name:item.name,des:item.des,mentor:item.mentor, url:item.url, complete: !item.complete}
-      }))
-      }
+  const completebtn = (changingindex)=>{
+    const completedlist= [...enrolarray]
+      completedlist[changingindex].complete = !completedlist[changingindex].complete;
+      return setenrolarray(completedlist)
+  }
   return (
-  <Mycontext.Provider value={{search,setsearch,courseslist,enrolarray,enrolbtn,notenrolbtn,completecourse}}>
+  <Mycontext.Provider value={{search,setsearch,courseslist,enrolarray,enrolbtn,notenrolbtn,completebtn}}>
     <div className='App-container'>
      <div className='App-header'>
     <Navbar/>
